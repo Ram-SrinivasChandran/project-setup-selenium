@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" preserve-order="true"  parallel="tests" thread-count="5">
+
+    <test name="verifyListing" parallel="true">
+        <groups>
+            <run>
+                <include name="login"  />
+            </run>
+            <dependencies>
+                <!--                <group name="createProject" depends-on="login"></group>-->
+            </dependencies>
+
+        </groups>
+        <packages>
+            <package name="net.breezeware.Tests"></package>
+        </packages>
+    </test>
+</suite>
